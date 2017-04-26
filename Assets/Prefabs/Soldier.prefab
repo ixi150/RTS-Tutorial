@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 4697955956251048}
   - component: {fileID: 95963090905820958}
   - component: {fileID: 195715515904141730}
-  - component: {fileID: 114982436361651706}
+  - component: {fileID: 114144715392521286}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
@@ -681,7 +681,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1117018541408302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 169.48, y: 52.064, z: 261.58}
+  m_LocalPosition: {x: 179.25, y: 52.064, z: 245.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4442552434475232}
@@ -843,7 +843,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114982436361651706
+--- !u!114 &114144715392521286
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1117018541408302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 571a1b511c2edea4e8165b648eada166, type: 3}
+  m_Script: {fileID: 11500000, guid: e1e80d71018bb3b4dbe257f3b0bf27a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
@@ -932,7 +932,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

@@ -9,6 +9,9 @@ public class Unit : MonoBehaviour
         ANIMATOR_ALIVE = "Alive",
         ANIMATOR_ATTACK = "Attack";
 
+    public static List<ISelectable> SelectableUnits { get { return selectableUnits; } }
+    static List<ISelectable> selectableUnits = new List<ISelectable>();
+
     public float HealthPercent { get { return hp / hpMax; } }
 
     public Transform target;
@@ -18,6 +21,8 @@ public class Unit : MonoBehaviour
     [SerializeField]
     GameObject hpBarPrefab;
 
+    protected HealthBar healthBar;
+
     NavMeshAgent nav;
     Animator animator;
 
@@ -26,12 +31,26 @@ public class Unit : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         hp = hpMax;
-        Instantiate(hpBarPrefab, transform);
+        healthBar = Instantiate(hpBarPrefab, transform).GetComponent<HealthBar>();
     }
 
-    void Update ()
+    private void Start()
     {
-		if (target)
+        if (this is ISelectable)
+        {
+            selectableUnits.Add(this as ISelectable);
+            (this as ISelectable).SetSelected(false);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (this is ISelectable) selectableUnits.Remove(this as ISelectable);
+    }
+
+    void Update()
+    {
+        if (target)
         {
             nav.SetDestination(target.position);
         }
