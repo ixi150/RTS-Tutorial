@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 65163483619918930}
   - component: {fileID: 114602407605692500}
   - component: {fileID: 195873651020508012}
+  - component: {fileID: 135387061298731164}
   m_Layer: 9
   m_Name: Dragon
   m_TagString: Untagged
@@ -1386,12 +1387,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90226a7d20cf46498ae1a025951e95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  hp: 0
-  hpMax: 250
   hpBarPrefab: {fileID: 1128145765333368, guid: 310f8c1f138ff0247ab684fe7105b67b,
     type: 2}
+  hp: 0
+  hpMax: 250
+  attackDistance: 5
+  attackCooldown: 2
+  attackDamage: 50
   stoppingDistance: 1
+  idlingCooldown: 2
+  patrolRadius: 10
+  chasingSpeed: 6
+--- !u!135 &135387061298731164
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &195873651020508012
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -1401,7 +1419,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
