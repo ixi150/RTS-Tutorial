@@ -90,4 +90,10 @@ public class Soldier : Unit, ISelectable
         lightEffect.enabled= false;
         lineEffect.enabled = false;
     }
+
+    public override void ReciveDamage(float damage, Vector3 damageDealerPosition)
+    {
+        base.ReciveDamage(damage, damageDealerPosition);
+        animator.SetTrigger("Get Hit");
+    }
 }
