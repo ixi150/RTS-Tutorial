@@ -51,9 +51,10 @@ GameObject:
   - component: {fileID: 4697955956251048}
   - component: {fileID: 95963090905820958}
   - component: {fileID: 195715515904141730}
-  - component: {fileID: 114144715392521286}
   - component: {fileID: 136995174528059660}
   - component: {fileID: 54683008600277820}
+  - component: {fileID: 114144715392521286}
+  - component: {fileID: 114327301935424814}
   m_Layer: 8
   m_Name: Soldier
   m_TagString: Untagged
@@ -1016,6 +1017,19 @@ MonoBehaviour:
   shootingLayerMask:
     serializedVersion: 2
     m_Bits: 2560
+--- !u!114 &114327301935424814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1117018541408302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03226f97fa4787e4e932fbe2ecae8fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: fc9e738b88448724ba577e6f5d6461a1, type: 3}
+  cost: 100
 --- !u!120 &120121045542204262
 LineRenderer:
   m_ObjectHideFlags: 1

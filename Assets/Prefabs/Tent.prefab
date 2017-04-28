@@ -35,7 +35,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4939835379216532}
   - component: {fileID: 136707874484836240}
+  - component: {fileID: 208209577081710198}
   - component: {fileID: 114210550697599752}
+  - component: {fileID: 114636290557197420}
   m_Layer: 10
   m_Name: Tent
   m_TagString: Untagged
@@ -365,6 +367,19 @@ MonoBehaviour:
     type: 2}
   spawnPoint: {fileID: 4369139048025340}
   flag: {fileID: 4314947132073168}
+--- !u!114 &114636290557197420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186189982420274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03226f97fa4787e4e932fbe2ecae8fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: c3f459fb682b4044195063cd0725c8b7, type: 3}
+  cost: 1000
 --- !u!136 &136707874484836240
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -627,3 +642,18 @@ Cloth:
     collisionSphereDistance: 0.1
   m_CapsuleColliders: []
   m_SphereColliders: []
+--- !u!208 &208209577081710198
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186189982420274}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 6, y: 8.5, z: 6}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
