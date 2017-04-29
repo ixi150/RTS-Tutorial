@@ -37,6 +37,7 @@ public class Tent : MonoBehaviour, ISelectable
 
         var unit = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
         unit.SendMessage("Command", flag.position, SendMessageOptions.DontRequireReceiver);
+        MoneyEarner.ShowMoneyText(unit.transform.position, -(int)buyable.cost);
     }
 
     void Command(Vector3 flagPosition)

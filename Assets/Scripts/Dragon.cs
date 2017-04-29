@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Dragon : Unit
 {
+    [SerializeField]
+    uint reward = 100;
+
     List<Soldier> seenSoldiers = new List<Soldier>();
     Soldier ClosestSoldier
     {
@@ -31,7 +34,7 @@ public class Dragon : Unit
     [SerializeField]
     float patrolRadius = 5;
     [SerializeField]
-    float chasingSpeed=5;
+    float chasingSpeed = 5;
 
     float normalSpeed;
 
@@ -114,15 +117,26 @@ public class Dragon : Unit
     public override void ReciveDamage(float damage, Vector3 damageDealerPosition)
     {
         base.ReciveDamage(damage, damageDealerPosition);
-        if (!target)
+        if (IsAlive)
         {
-            task = Task.move;
-            nav.SetDestination(damageDealerPosition);
+            if (!target)
+            {
+                task = Task.move;
+                nav.SetDestination(damageDealerPosition);
+            }
+            if (HealthPercent > .5f)
+            {
+                animator.SetTrigger("Get Hit");
+                nav.velocity = Vector3.zero;
+            }
         }
-        if (HealthPercent > .5f)
+        else
         {
-            animator.SetTrigger("Get Hit");
-            nav.velocity = Vector3.zero;
+            if (Money.TryAddMoney(reward) && reward > 0)
+            {
+                MoneyEarner.ShowMoneyText(transform.position, (int)reward);
+                reward = 0;
+            }
         }
     }
 
