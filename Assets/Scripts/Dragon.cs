@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dragon : Unit
+public class Dragon : Unit 
 {
     [SerializeField]
     uint reward = 100;
@@ -47,6 +47,7 @@ public class Dragon : Unit
         base.Awake();
         normalSpeed = nav.speed;
         startPoint = transform.position;
+        GameController.DragonList.Add(this);
     }
 
     protected override void OnTriggerEnter(Collider other)
