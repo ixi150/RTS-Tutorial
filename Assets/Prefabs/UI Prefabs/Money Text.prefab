@@ -88,8 +88,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 0
   startOffset: {x: 0, y: 2, z: 0}
-  endOffset: {x: 0, y: 5, z: 0}
-  duration: 3
+  endOffset: {x: 0, y: 10, z: 3}
+  duration: 2
   startColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0.52205884, g: 0.68357, b: 1, a: 0}
 --- !u!114 &114343167094682090
