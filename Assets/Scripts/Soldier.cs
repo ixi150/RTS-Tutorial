@@ -23,6 +23,11 @@ public class Soldier : Unit, ISelectable
         lightEffect = muzzleEffect.GetComponent<Light>();
         impactEffect.transform.SetParent(null);
         EndShootEffect();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
         GameController.SoldierList.Add(this);
     }
 

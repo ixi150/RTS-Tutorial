@@ -47,6 +47,11 @@ public class Dragon : Unit
         base.Awake();
         normalSpeed = nav.speed;
         startPoint = transform.position;
+    }
+
+    protected override void Start()
+    {
+        base.Start();
         GameController.DragonList.Add(this);
     }
 

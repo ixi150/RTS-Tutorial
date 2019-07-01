@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
         text = middlePanel.GetComponentInChildren<Text>(true);
     }
 
-    void Update()
+    void LateUpdate()
     {
         TidyList(soldierList);
         TidyList(dragonList);

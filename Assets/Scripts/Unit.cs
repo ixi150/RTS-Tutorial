@@ -47,7 +47,7 @@ public class Unit : MonoBehaviour
         healthBar = Instantiate(hpBarPrefab, transform).GetComponent<HealthBar>();
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         if (this is ISelectable)
         {
